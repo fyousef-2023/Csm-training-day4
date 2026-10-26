@@ -1,0 +1,637 @@
+<title>تدريب نجاح العملاء — اليوم الرابع</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f6f9;
+    --surface:#ffffff;
+    --surface-2:#fbfafc;
+    --border:#e3dfe8;
+    --text:#211c2b;
+    --text-dim:#655f72;
+    --text-faint:#948d9f;
+    --teal:#00A4A6;
+    --teal-ink:#005f60;
+    --teal-tint:#e1f5f5;
+    --purple:#653165;
+    --purple-ink:#3e1d3f;
+    --purple-tint:#f0e6f0;
+    --amber:#B9740F;
+    --amber-ink:#6b4308;
+    --amber-tint:#faf0dd;
+    --neutral-tint:#eeecf2;
+    --shadow: 0 1px 2px rgba(40,25,50,.05), 0 8px 24px -14px rgba(40,25,50,.18);
+    --d1:#00A4A6; --d1t:#e1f5f5;
+    --d2:#2C8C82; --d2t:#e2f2ef;
+    --d3:#653165; --d3t:#f0e6f0;
+    --d4:#B8541F; --d4t:#fbe9df;
+    --d5:#B9740F; --d5t:#faf0dd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#18151d;
+      --surface:#221e29;
+      --surface-2:#282430;
+      --border:#3a3444;
+      --text:#f1eef5;
+      --text-dim:#b6afc4;
+      --text-faint:#847d94;
+      --teal:#3fc9cb;
+      --teal-ink:#bdf0f0;
+      --teal-tint:#12302f;
+      --purple:#c497c5;
+      --purple-ink:#ecdcec;
+      --purple-tint:#332235;
+      --amber:#e3a34a;
+      --amber-ink:#f7ddb0;
+      --amber-tint:#3a2c14;
+      --neutral-tint:#2c2733;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.5);
+      --d1:#3fc9cb; --d1t:#12302f;
+      --d2:#59c2ae; --d2t:#132c26;
+      --d3:#c497c5; --d3t:#332235;
+      --d4:#e08a52; --d4t:#3a2416;
+      --d5:#e3a34a; --d5t:#3a2c14;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#18151d;
+    --surface:#221e29;
+    --surface-2:#282430;
+    --border:#3a3444;
+    --text:#f1eef5;
+    --text-dim:#b6afc4;
+    --text-faint:#847d94;
+    --teal:#3fc9cb;
+    --teal-ink:#bdf0f0;
+    --teal-tint:#12302f;
+    --purple:#c497c5;
+    --purple-ink:#ecdcec;
+    --purple-tint:#332235;
+    --amber:#e3a34a;
+    --amber-ink:#f7ddb0;
+    --amber-tint:#3a2c14;
+    --neutral-tint:#2c2733;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.5);
+    --d1:#3fc9cb; --d1t:#12302f;
+    --d2:#59c2ae; --d2t:#132c26;
+    --d3:#c497c5; --d3t:#332235;
+    --d4:#e08a52; --d4t:#3a2416;
+    --d5:#e3a34a; --d5t:#3a2c14;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    direction:rtl;
+    font-family:'Tajawal',-apple-system,'Segoe UI',Tahoma,sans-serif;
+    line-height:1.65;
+    font-variant-numeric:tabular-nums;
+  }
+  h1,h2,h3,.display{font-family:'Cairo',-apple-system,'Segoe UI',Tahoma,sans-serif; text-wrap:balance;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; direction:ltr; unicode-bidi:isolate;}
+
+  a{color:inherit;}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px;}
+
+  /* ===== Header ===== */
+  .masthead{
+    background:linear-gradient(135deg,var(--purple) 0%, var(--teal) 100%);
+    border-radius:20px;
+    padding:34px 32px;
+    color:#fff;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(255,255,255,.16), transparent 55%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; display:inline-block;
+    font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    background:rgba(255,255,255,.16); padding:4px 10px; border-radius:99px;
+    margin-bottom:14px;
+  }
+  .masthead h1{font-size:26px; font-weight:800; margin:0 0 8px; color:#fff;}
+  .masthead p{margin:0; font-size:14.5px; color:rgba(255,255,255,.88); max-width:60ch;}
+  .stat-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; position:relative;}
+  .stat{
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22);
+    border-radius:12px; padding:10px 16px; min-width:96px;
+  }
+  .stat b{display:block; font-family:'Cairo',sans-serif; font-size:20px; font-weight:800;}
+  .stat span{font-size:11.5px; color:rgba(255,255,255,.82);}
+
+  /* ===== Daily template legend ===== */
+  .legend{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:18px 20px; margin-bottom:22px; box-shadow:var(--shadow);
+  }
+  .legend h2{font-size:14px; margin:0 0 12px; color:var(--text-dim); font-weight:700;}
+  .legend-row{column-count:2; column-gap:28px;}
+  .legend-item{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--text-dim); padding:5px 0; break-inside:avoid;}
+  .legend-time{font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; color:var(--text-faint); font-size:11.5px;}
+  .legend-dot{width:9px;height:9px;border-radius:3px;flex:none;}
+
+  /* ===== Day tabs ===== */
+  .day-tabs{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:22px;
+  }
+  .day-tab{
+    background:var(--surface); border:1.5px solid var(--border); border-radius:14px;
+    padding:12px 10px; text-align:center; cursor:pointer; transition:.15s border-color,.15s transform;
+    font-family:inherit;
+  }
+  .day-tab:hover{transform:translateY(-1px);}
+  .day-tab .num{
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:20px; line-height:1;
+    display:block; margin-bottom:6px; color:var(--dc);
+  }
+  .day-tab .lbl{font-size:11.5px; color:var(--text-dim); display:block; line-height:1.4;}
+  .day-tab.active{border-color:var(--dc); background:var(--dt); box-shadow:var(--shadow);}
+  .day-tab:focus-visible{outline:2px solid var(--dc); outline-offset:2px;}
+
+  /* ===== Day panel ===== */
+  .day-panel{display:none;}
+  .day-panel.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+  @media (prefers-reduced-motion:reduce){ .day-panel.active{animation:none;} }
+
+  .day-head{
+    display:flex; align-items:center; gap:14px; margin-bottom:18px; padding-inline-start:2px;
+  }
+  .day-head .badge{
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:22px; color:#fff;
+    background:var(--dc); width:48px;height:48px;border-radius:13px;
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .day-head h2{font-size:20px; margin:0 0 3px; color:var(--text);}
+  .day-head .sub{font-size:13px; color:var(--text-dim); margin:0;}
+
+  .timeline{display:flex; flex-direction:column; gap:12px;}
+
+  .block{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:18px 20px; box-shadow:var(--shadow);
+    border-inline-start:4px solid var(--block-c, var(--border));
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .block-top{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .block-time{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate;
+    font-size:12.5px; font-weight:600; color:var(--text-dim);
+    background:var(--neutral-tint); padding:3px 10px; border-radius:99px;
+  }
+  .block-kind{
+    font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;
+    background:var(--chip-bg,var(--neutral-tint)); color:var(--chip-c,var(--text-dim));
+  }
+  .block h3{font-size:16px; margin:2px 0 0; font-weight:700;}
+  .block .lead{font-size:12.5px; color:var(--text-dim); margin:-6px 0 0;}
+
+  .part{margin-top:4px;}
+  .part h4{
+    font-size:12.5px; font-weight:700; color:var(--dc); margin:0 0 8px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .part h4::before{content:"◆"; font-size:9px;}
+  ul.pts{margin:0 0 10px; padding-inline-start:20px;}
+  ul.pts li{margin-bottom:6px; font-size:13.5px;}
+  ul.pts li:last-child{margin-bottom:0;}
+  ul.pts b{color:var(--text);}
+  .flow{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:6px 0 10px;
+    font-size:12px; color:var(--text-dim);
+  }
+  .flow .fs{
+    background:var(--neutral-tint); border-radius:8px; padding:5px 10px; font-weight:600; color:var(--text);
+  }
+  .flow .ar{color:var(--text-faint); font-size:11px;}
+
+  .link-btn{
+    display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+    background:var(--dc); color:#fff !important; font-size:12.5px; font-weight:700;
+    padding:8px 14px; border-radius:10px; margin-top:4px; width:fit-content;
+    transition:.15s filter;
+  }
+  .link-btn:hover{filter:brightness(1.08);}
+  .link-btn.ghost{background:transparent; color:var(--dc) !important; border:1.3px solid var(--dc);}
+  .link-row{display:flex; flex-wrap:wrap; gap:8px;}
+
+  .role-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:14px;}
+  .role-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    padding:16px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:9px;
+  }
+  .role-card h3{
+    font-size:13.5px; margin:0; font-weight:700; color:var(--purple);
+    display:flex; align-items:center; gap:6px;
+  }
+  .role-card h3::before{content:"◆"; font-size:9px;}
+  .role-card ul{margin:0; padding-inline-start:18px; display:flex; flex-direction:column; gap:5px;}
+  .role-card ul li{font-size:12.5px; color:var(--text-dim); line-height:1.55;}
+  .role-card ul li b{color:var(--text);}
+
+  .task-box{
+    background:var(--surface-2); border:1px dashed var(--border); border-radius:12px;
+    padding:14px 16px; margin-top:2px;
+  }
+  .task-box .goal{font-size:12.5px; color:var(--text-dim); margin:0 0 10px;}
+  .task-box .goal b{color:var(--purple-ink);}
+  ol.scen{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:9px;}
+  ol.scen li{font-size:13.5px;}
+  ol.scen .ans{display:block; font-size:12px; color:var(--teal-ink); margin-top:2px;}
+
+  .review-note{
+    display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:var(--text-dim);
+    background:var(--neutral-tint); border-radius:10px; padding:9px 12px;
+  }
+
+  .quiz-box{
+    background:var(--amber-tint); border-radius:12px; padding:14px 16px;
+  }
+  .quiz-box ol{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:7px;}
+  .quiz-box li{font-size:13.5px; color:var(--amber-ink);}
+
+  .oral-box ul{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:7px;}
+  .oral-box li{font-size:13.5px;}
+
+  .no-test{
+    display:flex; align-items:center; gap:10px; color:var(--text-dim); font-size:13px;
+  }
+  .no-test .ic{font-size:18px;}
+
+  footer{
+    text-align:center; font-size:11.5px; color:var(--text-faint);
+    padding:26px 16px 10px; line-height:1.9;
+  }
+
+  @media (max-width:720px){
+    .day-tabs{grid-template-columns:repeat(3,1fr);}
+    .masthead{padding:26px 20px;}
+    .masthead h1{font-size:21px;}
+  }
+  @media (max-width:480px){
+    .day-tabs{grid-template-columns:repeat(2,1fr);}
+    .legend-row{column-count:1;}
+  }
+
+  .task-head{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px;}
+  .task-code{font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; font-size:11.5px; font-weight:600; background:var(--purple-tint); color:var(--purple-ink); padding:2px 9px; border-radius:99px;}
+  .task-title{font-size:13.5px; font-weight:700; color:var(--text);}
+  .task-stack{display:flex; flex-direction:column; gap:10px;}
+  .ph{display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--text-faint); border:1.3px dashed var(--border); border-radius:10px; padding:6px 12px; margin-top:8px; width:fit-content;}
+  .path{display:flex; flex-wrap:wrap; align-items:center; gap:5px; font-size:11.5px; color:var(--text-dim); background:var(--surface-2); border:1px solid var(--border); border-radius:9px; padding:6px 10px; margin:2px 0 8px; width:fit-content; max-width:100%;}
+  .path b{color:var(--teal-ink); font-weight:700;}
+  .fixed-task{background:var(--teal-tint); border:1px solid transparent; border-radius:12px; padding:12px 16px;}
+  .fixed-task .task-code{background:var(--teal); color:#fff;}
+  .res-table-wrap{overflow-x:auto;}
+  table.res{width:100%; border-collapse:collapse; font-size:12.5px; min-width:520px;}
+  table.res th{text-align:start; font-weight:700; color:var(--text-dim); padding:8px 10px; border-bottom:1.5px solid var(--border); font-size:11.5px;}
+  table.res td{padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top;}
+  table.res td a{color:var(--teal-ink); font-weight:600; text-decoration:none;}
+  table.res td a:hover{text-decoration:underline;}
+  .day-chip{display:inline-block; font-family:'Cairo',sans-serif; font-weight:800; font-size:11.5px; color:#fff; background:var(--dc); border-radius:6px; padding:1px 8px; margin-inline-end:4px;}
+  .final-quiz{background:var(--amber-tint); border-radius:12px; padding:14px 16px; margin-top:4px;}
+  .final-quiz h4{margin:0 0 8px; font-size:13px; color:var(--amber-ink);}
+  .final-quiz ol{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:6px;}
+  .final-quiz li{font-size:13px; color:var(--amber-ink);}
+</style>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <span class="eyebrow">CSM · Rewaa · Training Track</span>
+    <h1>برنامج تدريب موظف نجاح العملاء</h1>
+    <p>خطة تدريبية مدتها خمسة أيام عمل مبنية على بوابة نجاح العملاء، تتدرّج من التعريف بالشركة ودور الموظف، إلى أدوات العمل اليومية، فمراحل التفعيل، فالخدمات المالية والتجارية، وتنتهي بإعادة التفعيل وإدارة الحالات ومعايير الجودة. يتعلّم المتدرب في كل جلسة مضمون المصدر المعرفي، وكيفية الوصول إليه من البوابة، وكيفية استخدامه مع العميل.</p>
+    <div class="stat-row" id="stats"></div>
+  </div>
+
+  <div class="legend">
+    <h2>هيكل اليوم التدريبي الثابت</h2>
+    <div class="legend-row">
+      <div class="legend-item"><span class="legend-time">09:00</span><span class="legend-dot" style="background:var(--amber)"></span>اختبار (من اليوم الثاني)</div>
+      <div class="legend-item"><span class="legend-time">09:30</span><span class="legend-dot" style="background:var(--teal)"></span>الجلسة التدريبية الأولى</div>
+      <div class="legend-item"><span class="legend-time">11:00</span><span class="legend-dot" style="background:var(--purple)"></span>استراحة الظهر/الصلاة + مراجعة + تاسكات</div>
+      <div class="legend-item"><span class="legend-time">13:30</span><span class="legend-dot" style="background:var(--teal)"></span>الجلسة التدريبية الثانية</div>
+      <div class="legend-item"><span class="legend-time">15:00</span><span class="legend-dot" style="background:#9c96a8"></span>استراحة</div>
+      <div class="legend-item"><span class="legend-time">16:00</span><span class="legend-dot" style="background:var(--purple)"></span>تاسكات + التاسك الثابت: حضور الويبينار</div>
+      <div class="legend-item"><span class="legend-time">17:00</span><span class="legend-dot" style="background:var(--amber)"></span>الجلسة التدريبية الثالثة (الختامية): مراجعة + شفهي + أسئلة</div>
+    </div>
+  </div>
+
+  <nav class="day-tabs" id="dayTabs"></nav>
+  <main id="dayPanels"></main>
+
+  <div class="link-row" style="margin-top:22px;justify-content:center">
+      <a class="link-btn" style="--dc:var(--purple)" href="https://fyousef-2023.github.io/CSM-PORTAL/" target="_blank" rel="noopener">🔗 بوابة نجاح العملاء</a>
+    </div>
+
+  <footer>
+    إعداد: قسم الجودة — فريق نجاح العملاء &nbsp;|&nbsp; رِواء<br>
+    مرجع تدريبي مبني على بوابة نجاح العملاء — النسخة 2.0
+  </footer>
+</div>
+
+<script>
+const P = 'https://fyousef-2023.github.io/';
+const RES = {
+  portal:{label:'بوابة نجاح العملاء', url:P+'CSM-PORTAL/', path:['الصفحة الرئيسية']},
+  onboardingDeck:{label:'التدريب التعريفي لموظف نجاح العملاء', url:'https://docs.google.com/presentation/d/1hcDY607Lm0VdX_y7tPj7S0tHxXwb19MHWlWVnTvLm7I/edit?slide=id.p1#slide=id.p1', path:['الدور والالتزامات']},
+  platformIntro:{label:'مقدمة وتأهيل منصة رِواء', url:'https://scribehow.com/o/RP0ycIc3SFOSm8rov-EIkg/page/mqdmh_wtahyl_lmnsh_rwaa__Kmel96usRmG1o_ezZuopJQ', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  helpCenter:{label:'مركز المساعدة — Help Center', url:'https://help.rewaa.com/ar-SA', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  youtube:{label:'قناة رِواء على يوتيوب', url:'https://www.youtube.com/@RewaaTechnology/playlists', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  csmRole:{label:'دور موظف نجاح العملاء', url:P+'CSM-Role/', path:['الدور والالتزامات']},
+  calendar:{label:'الالتزام بالجدول اليومي والتحديثات', url:P+'calendar/', path:['الدور والالتزامات']},
+  crm:{label:'نظام إدارة علاقات العملاء — CRM', url:'https://crm.zoho.com/crm/org709483323/tab/Accounts/custom-view/4412475000000087515/list', path:['البرامج والأدوات']},
+  metabase:{label:'قاعدة بيانات العملاء — Metabase', url:'https://bi-internal.platform.rewaatech.com/dashboard/9109-merchant-profile-dashboard', path:['البرامج والأدوات']},
+  adminPanel:{label:'Admin Panel', url:'https://admin.platform.rewaatech.com/accounts/list', path:['البرامج والأدوات']},
+  documentation:{label:'الالتزام بالتوثيق', url:P+'documentation/', path:['الدور والالتزامات']},
+  maqsam:{label:'Maqsam', url:'https://portal.maqsam.com/sign-in', path:['البرامج والأدوات','Maqsam']},
+  tagGuide:{label:'دليل التاج', url:P+'Tag/', path:['البرامج والأدوات','Maqsam']},
+  tagging:{label:'الالتزام بالتاج', url:P+'Tagging/', path:['الدور والالتزامات']},
+  cx3:{label:'3CX', url:'https://rewaa-tech.3cx.ae/#/people', path:['البرامج والأدوات']},
+  callCheck:{label:'الالتزام بالمكالمة — Call Checklist', url:P+'-CSM-Call-Checklist/', path:['الدور والالتزامات']},
+  chat:{label:'الالتزام بالرد والتعامل مع المحادثات', url:P+'chat/', path:['الدور والالتزامات']},
+  quickReplies:{label:'دليل الردود السريعة — Open CX', url:'https://docs.google.com/spreadsheets/d/1rnUH9_MxW3TWzqNzVJdiSH9AE3U1gHnpN2uBnJBQFGA/edit?gid=0#gid=0', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  stages:{label:'مراحل التفعيل', url:P+'CSM_Stages/', path:['المصادر المعرفية','التفعيل']},
+  onboarding:{label:'رحلة أتمتة الإعداد', url:P+'Onboarding-Automation/', path:['المصادر المعرفية','التفعيل']},
+  product:{label:'رفع المنتجات', url:P+'Product/', path:['المصادر المعرفية','التفعيل']},
+  training:{label:'دليل التدريب الشامل', url:P+'Training/', path:['المصادر المعرفية','التفعيل','التدريب']},
+  devicesPrice:{label:'أسعار الأجهزة الجديدة', url:'https://docs.google.com/spreadsheets/d/1DSDjrcTG-pEnnJM0PN98v1MIajgEv3bsp-lKoiSy9GI/edit', path:['المصادر المعرفية','التفعيل','الأجهزة']},
+  devicesTrack:{label:'تتبع شحنة الأجهزة', url:'https://torod.co/ar/order/tracking/1EpEBSie', path:['المصادر المعرفية','التفعيل','الأجهزة']},
+  rewaaPay:{label:'رِواء باي — RewaaPay', url:P+'RewaaPay/', path:['المصادر المعرفية','التفعيل']},
+  invoice:{label:'فاتورة الاشتراك', url:P+'Invoice/', path:['المصادر المعرفية','التفعيل']},
+  pkgRewaa:{label:'باقات رِواء', url:'https://docs.google.com/spreadsheets/d/1Q8OzseapsSu_fvMd17344ITtiJaM0nru5pcbRRE_bog/edit?gid=0#gid=0', path:['المصادر المعرفية','الباقات']},
+  pkgMazaya:{label:'باقات مزايا ومنشآت', url:'https://docs.google.com/spreadsheets/d/10bHxn4LEatHGz632ARZuOhelO5fNHqvp7XegbSJWUDg/edit', path:['المصادر المعرفية','الباقات']},
+  pkgOld:{label:'الباقات القديمة', url:'https://docs.google.com/spreadsheets/d/1xg93EOiVY-5Q-NUfYh2G4aH_gNvV-fgcnf3bsWCPd2k/edit?gid=688925703#gid=688925703', path:['المصادر المعرفية','الباقات']},
+  grubtech:{label:'دليل عملاء Grubtech', url:P+'Grubtech_CSM_Guide/', path:['المصادر المعرفية','التفعيل']},
+  zatca:{label:'دعم الفوترة الإلكترونية — 2,500 ريال', url:P+'Zatca/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  monshaat:{label:'دعم مزايا (منشآت) — 1,500 ريال', url:P+'monshaat/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  cashback:{label:'كاش باك من رِواء', url:P+'Cashback/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  frill:{label:'منصة الاقتراحات — Frill', url:'https://rewaa.frill.co/b/6vrw5e0l/feature-ideas', path:['البرامج والأدوات','منصة الاقتراحات']},
+  frillChannel:{label:'قناة تقييم الأفكار #new-ideas-frill', url:'https://rewaatech.slack.com/archives/C09L1GE1CL9', path:['البرامج والأدوات','منصة الاقتراحات']},
+  reactivation:{label:'إعادة التفعيل', url:P+'Reactivation/', path:['المصادر المعرفية','إعادة التفعيل']},
+  cases:{label:'دليل إدارة الحالات', url:P+'CasesV2/', path:['المصادر المعرفية','إدارة الحالات']},
+  caseFollow:{label:'الالتزام بإدارة الحالات', url:P+'CaseFollow/', path:['الدور والالتزامات']},
+  nps:{label:'تقييم NPS العالمي', url:'https://docs.google.com/document/d/1KqWFCuq4a_yS1yQZZy956dPUiQ71gbqn816GaMN3Jdo/edit?tab=t.0#heading=h.2gt4uk9n01mo', path:['المصادر المعرفية','قريباً']},
+  sop:{label:'SOP — إجراءات العمل الموحّدة', url:'https://rewaa-cx-portal-frontend-3u9n.onrender.com/sop-builder/', path:['المصادر المعرفية','قريباً']},
+  quality:{label:'معايير جودة التعامل مع العملاء', url:P+'CSM_Quality_Criteria_Interactive/', path:['الالتزام والجودة']},
+  task1_1:{label:'تاسك 1.1 — التسجيل في منصة رِواء', url:'https://docs.google.com/document/d/1TtAYS1c4922FY_E3n3kaRSWmJcSMiPceKIkes5Plyl8/edit?tab=t.0', path:[]},
+  task1_2:{label:'تاسك 1.2 — رِواء أكاديمي', url:'https://docs.google.com/document/d/12hjN6pgksaqL8E6GJOgpua5MvU-yjfRpBKtUnoxScKo/edit?tab=t.0', path:[]},
+  task1_3:{label:'تاسك 1.3 — البدء في منصة رِواء', url:'https://docs.google.com/document/d/1eSRks7AjMMDlV9CLhSgc2UqrJnBV1xtxXruy33KgKMc/edit?tab=t.0', path:[]},
+  taskWebinar:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1XH-PopR3B21T5oKHTQmQbwfcFPoLT-O6sf4J1KPf8rE/edit?tab=t.0', path:[]},
+  quiz2:{label:'رابط الاختبار', url:'https://docs.google.com/forms/d/e/1FAIpQLSeAjTsG028RpQ8ZhrRw8r30aVE9nLdcxm-vc5lWiPREnZu1lA/viewform', path:[]},
+  task2_1:{label:'تاسك 2.1 — Activation', url:'https://docs.google.com/document/d/1sueAFeBV8CAgQ-ni7AhH4dwCu0CLeJROuQOCGNhyN_M/edit?tab=t.0', path:[]},
+  task2_2:{label:'تاسك 2.2 — Operational', url:'https://docs.google.com/document/d/19J4_2d48c70rqvXL6i-WfWuEvt9DQLe6zrtD0P_yZoc/edit?tab=t.0', path:[]},
+  callsSheet:{label:'ملف المكالمات — Calls', url:'https://docs.google.com/spreadsheets/d/1Z5y57q6cJwwpk9cMq9AE3qbxu6cpEAWjPjdJkHD6N08/edit?gid=805631889#gid=805631889&range=A1', path:[]},
+  taskWebinar2:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1V30jeLai0CGyr0Qf6NfQuvpEkUl6yaDyrGKSs3pclGA/edit?tab=t.0', path:[]},
+  quiz3:{label:'رابط الاختبار', url:'https://forms.gle/w5ucUpwje5cvRtbw7', path:[]},
+  task3_1:{label:'تاسك 3.1 — Documentation', url:'https://docs.google.com/document/d/11U5X_Vp_-TfwvVeqT0JkgUWef-4kYfznsbWGQ7Wu8bo/edit?usp=sharing', path:[]},
+  task3_2:{label:'تاسك 3.2 — Documentation', url:'https://docs.google.com/document/d/1VK45LK3GpLmyVF-F4G26i4vQlo1pjAXEUCkqT2f_2ok/edit?usp=sharing', path:[]},
+  task3_3:{label:'تاسك 3.3 — Tag', url:'https://docs.google.com/document/d/1Hejvi2TJW90UDEihTRYraEwE-T_OpnThASicyNo2VUI/edit?usp=sharing', path:[]},
+  task3_4:{label:'تاسك 3.4 — Chat', url:'https://docs.google.com/document/d/1aQQ4qGKDRGL58S_3k9Bjqf_3u2k5svwUInj6XMoKv-U/edit?usp=sharing', path:[]},
+  taskWebinar3:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1Hgie3_fllygX-p9iFXe28DjvYchVRjttRJkFmVfsNz8/edit?usp=sharing', path:[]},
+  quiz4:{label:'رابط الاختبار', url:'https://forms.gle/3CauZA96gcwFpBqE6', path:[]},
+  task4_1:{label:'تاسك 4.1 — RewaaPay', url:'https://docs.google.com/document/d/1MmX7qD45rxYgY5K3rm3ukJMTuKVHn8fJLjtHrciwJqM/edit?usp=sharing', path:[]},
+  task4_2:{label:'تاسك 4.2 — Subscription', url:'https://docs.google.com/document/d/1fr3dq81OTJziW4Hnyl9auAWIIFk-1Y7wrpuapY8p030/edit?usp=sharing', path:[]},
+  task4_3:{label:'تاسك 4.3 — Grubtech', url:'https://docs.google.com/document/d/1e46OWCenVmryIjeVgB1cPrZ5SIMB5UlK0CA60Haui88/edit?usp=sharing', path:[]},
+  task4_4:{label:'تاسك 4.4 — Referrals & Rewards', url:'https://docs.google.com/document/d/1lRJLhXcTWq6EpZMfCXkvziMuCUvx6jDFwi15Kx_QHSM/edit?usp=sharing', path:[]},
+  taskWebinar4:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1bOsIeMwkzJ2IVUc4iEbaCicykLHfssQTCIt0odml8_g/edit?usp=sharing', path:[]},
+  webinarLive:{label:'رابط التسجيل بالويبينار', url:'https://s.rewaa.com/webinars-training/', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
+  webinarDrive:{label:'مجلد الجلسات المسجلة', url:'https://drive.google.com/drive/folders/1J9dUikBIglojA4HnFrphd-ZHBxc3OWUr', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
+};
+
+const FIXED = {code:'ثابت', title:'التاسك الثابت اليومي — حضور الويبينار', fixed:true,
+  goal:'حضور الويبينار (المباشر أو المسجل) والتطبيق العملي على محتواه، مع تسجيل أي أسئلة أو استفسارات تظهر أثناء التطبيق ومحاولة البحث عن إجاباتها من المصادر المتاحة.',
+  links:[RES.webinarLive, RES.webinarDrive]};
+
+const DAYS = [
+{
+  num:1, c:'--d1', t:'--d1t',
+  titleAr:'رِواء ودور موظف نجاح العملاء', titleEn:'Rewaa, the CSM Role & the Portal',
+  blocks:[]
+},
+
+{
+  num:2, c:'--d2', t:'--d2t',
+  titleAr:'التفعيل من الاستلام حتى التشغيل', titleEn:'Activation Journey',
+  blocks:[]
+},
+
+{
+  num:3, c:'--d3', t:'--d3t',
+  titleAr:'أدوات العمل اليومية والتوثيق', titleEn:'Daily Tools, Documentation & Communication',
+  blocks:[]
+},
+
+{
+  num:4, c:'--d4', t:'--d4t',
+  titleAr:'الخدمات المالية وبرامج الدعم', titleEn:'Payments, Billing & Support Programs',
+  blocks:[
+    {type:'quiz', time:'09:00–09:30', title:'اختبار', note:'يغطي محتوى اليوم الثالث', questions:[
+      'ما الذي يُستخدم له كل من CRM وMetabase وAdmin Panel؟',
+      'اذكر الخطوات الست للالتزام بالتوثيق.',
+      'ما الفرق بين التاجات التلقائية واليدوية؟ ومتى يُضاف التاج اليدوي؟',
+      'ما معيار زمن الاستجابة (SLA) في Open CX؟ ومتى تُغلق المحادثة بحالة Resolved؟',
+      'كم محاولة اتصال عبر Maqsam قبل الانتقال لأداة أخرى؟'
+    ], links:[RES.quiz4]},
+
+    {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'رِواء باي وفاتورة الاشتراك والباقات',
+      parts:[
+        {h:'رِواء باي — RewaaPay', items:[
+          'خدمة قبول مدفوعات متكاملة (مدى وفيزا/ماستركارد) مع مزامنة تلقائية بين منصة رِواء وجهاز الدفع.',
+          '<b>طرق التفعيل الثلاث:</b> تطبيق Rewaa Cashier على جهاز أندرويد يدعم NFC، أو ربط جهاز الدفع بالمنصة عبر المتصفح، أو تطبيق رِواء باي المستقل.',
+          '<span class="flow"><span class="fs">المبيعات — العرض والفاتورة</span><span class="ar">←</span><span class="fs">جيديا — المستندات ونقطة Nearpay</span><span class="ar">←</span><span class="fs">CRM — ربط التاجر</span><span class="ar">←</span><span class="fs">التدريب — فيديو التفعيل</span></span>',
+          '<b>المستندات:</b> السجل التجاري، شهادة الآيبان مختومة، رقم جوال المالك، رقم هوية المالك، والرخصة البلدية إن وجدت.',
+          '<b>متابعة الصفقة في CRM:</b> Account ← Deal ← Related List (Pipeline: Geidea، Layout: Payment Layout)، وعمود Stage يوضح الحالة الحالية.',
+          '<b>⚠️ تنبيه:</b> لا تُفتح تذكرة تفعيل رِواء باي إطلاقاً والصفقة في مرحلة New أو Communication؛ يُوجَّه العميل لتطبيق التاجر لرفع المستندات.',
+          '<b>عند وجود صفقة دفع:</b> يحدد الموظف Deal Owner من سجل الصفقة، ويبلغ العميل بأنه سيتواصل معه عبر الواتساب لطلب المستندات.'
+        ], links:[RES.rewaaPay]},
+        {h:'فاتورة الاشتراك', items:[
+          'السجل الرسمي لاشتراك العميل: الباقة، الإضافات، طريقة الدفع، وتفاصيل البنود المفوترة.',
+          '<b>وصول العميل:</b> من المنصة عبر الإعدادات ← الاشتراك ← تبويب سجل الفواتير، أو من تطبيق «مساعد».',
+          '<b>وصول الموظف:</b> صفحة حساب العميل في CRM ← Related List ← Invoices، ثم فتح الفاتورة لمراجعة البنود.'
+        ], links:[RES.invoice]},
+        {h:'الباقات', items:[
+          'روابط الباقات الحالية والقديمة لمراجعة خصائص كل باقة عند التعامل مع العميل: باقات رِواء، باقات مزايا ومنشآت، والباقات القديمة كمرجع لخصائص باقات العملاء السابقين.'
+        ], links:[RES.pkgRewaa, RES.pkgMazaya, RES.pkgOld]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر لمراجعة دليل رِواء باي ودليل فاتورة الاشتراك وملفات الباقات.',
+      tasks:[
+        {code:'4.1', title:'سيناريوهات رِواء باي', goal:'فهم مسار تفعيل رِواء باي ومسؤولية كل طرف، والتعرّف على مكان صفقة الدفع في CRM (Account ← Deal ← Related List، وPipeline: Geidea)، ثم كتابة الإجراء الصحيح لكل موقف:', items:[
+          'صفقة العميل في مرحلة Communication ويطلب فتح تذكرة تفعيل.',
+          'عميل يسأل عن المستندات المطلوبة للتفعيل.',
+          'عميل يريد معرفة حالة طلبه الحالية.'
+        ], links:[RES.task4_1]},
+        {code:'4.2', title:'فاتورة الاشتراك والباقة', goal:'فتح حساب عميل تجريبي في CRM ← Related List ← Invoices، واستخراج الباقة والإضافات وطريقة الدفع من الفاتورة، ثم مطابقة خصائص الباقة من ملف الباقات، وكتابة خطوات وصول العميل إلى فاتورته بنفسه من المنصة ومن تطبيق «مساعد».', links:[RES.task4_2]}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'Grubtech وبرامج الدعم والحوافز ومنصة الاقتراحات',
+      parts:[
+        {h:'ربط تطبيقات التوصيل — Grubtech', items:[
+          'ربط عدة تطبيقات توصيل بمنصة رِواء من جهاز واحد بالشراكة مع Grubtech.',
+          '<b>توزيع الأدوار:</b> موظف نجاح العملاء (التواصل وجمع الملف ومراجعته)، وفريق Products Onboarding (استلام الملف ورفع التيكت)، وGrubtech (الإعداد الكامل).',
+          '<b>العميل الجديد:</b> التحقق من الاشتراك في CRM ضمن Invoices ← إرسال القالب الفارغ ← طلب Store ID لكل تطبيق ← التحقق من الملف ← التسليم لفريق Products Onboarding ← المتابعة حتى التفعيل.',
+          '<b>العميل الحالي:</b> إبلاغ العميل ← طلب ملف المنتجات من Products Onboarding برقم Data Collection ← إرساله للعميل لاستكماله ← التحقق ← التسليم.',
+          '<b>الملف ثلاث صفحات:</b> Store IDs، والمنيو، والإضافات. قبل التسليم يتحقق الموظف من Store ID لكل تطبيق، والصور، والأسماء بالعربية والإنجليزية، والأسعار، والسعرات لهنقرستيشن.',
+          'الأسعار داخلية للاطلاع فقط، ولا يفاوض الموظف العميل عليها.'
+        ], links:[RES.grubtech]},
+        {h:'برامج الدعم والحوافز', items:[
+          '<b>دعم الفوترة الإلكترونية (2,500 ريال):</b> رصيد دائن من هيئة الزكاة والضريبة والجمارك لمرة واحدة. أبرز الشروط: منشأة صغيرة أو متوسطة خاضعة للفوترة، إيرادات سنوية لا تتجاوز 3 ملايين ريال، سجل تجاري ساري، ولم تستفد سابقاً. المطلوب: فاتورة اشتراك رِواء (رقمها يبدأ بـ RW) ونموذج فاتورة إلكترونية.',
+          '<b>دعم مزايا — منشآت (1,500 ريال):</b> بالشراكة مع منشآت عبر منصة مزايا، مع خصم إضافي من رِواء. يبلغ الموظف عملاء القائمة برسالة التأكيد، ثم يتابع حالات تأكيد الاستلام بالاتصال وشرح الخطوات: الدخول عبر نفاذ ← لوحة التحكم ← تفاصيل الطلب ← تأكيد استلام الطلب. التأكيد شرط للاستفادة من الدعم.',
+          '<b>كاش باك رِواء:</b> رصيد يُستخدم داخل المنصة فقط، يُمنح في حملات مستهدفة، أو عند استيفاء شروط التفعيل، أو تعويضاً عن مشكلة تقنية. الاستحقاق بقرار من الإدارة فقط، ولا يمنحه الموظف بنفسه، والتفاصيل تُحدَّث في الاجتماع اليومي والقناة المخصصة.'
+        ], links:[RES.zatca, RES.monshaat, RES.cashback]},
+        {h:'منصة الاقتراحات — Frill', items:[
+          'يسجّل العميل الدخول ببيانات منصة رِواء، ويضيف اقتراحه أو يرفعه الموظف نيابة عنه، ثم يُقيَّم عبر قناة #new-ideas-frill، ويُنشر ويصل رابطه للعميل تلقائياً.',
+          '⚠️ لا تُقيَّم الفكرة أكثر من مرة؛ تقييمها مرتين يعني نشرها ووصول الرسالة للعميل مرتين.'
+        ], links:[RES.frill, RES.frillChannel]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'4.3', title:'مراجعة ملف Grubtech', goal:'إعداد قائمة التحقق التي يراجعها الموظف في ملف عميل جديد مشترك في تطبيقَي توصيل، لكل صفحة من صفحات الملف، وتحديد أهم نقطة يجب التأكد منها قبل تسليم الملف لفريق Products Onboarding:', items:[
+          'Store IDs',
+          'المنيو',
+          'الإضافات (Add-ons)'
+        ], links:[RES.task4_3]},
+        {code:'4.4', title:'برامج الدعم والحوافز', goal:'تحديد البرنامج المناسب والإجراء المطلوب لكل عميل، مع توضيح ما يملك الموظف تنفيذه بنفسه وما يحتاج قراراً أو جهة أخرى:', items:[
+          'عميل يسأل عن دعم هيئة الزكاة، وإيراداته السنوية مليونا ريال.',
+          'عميل من قائمة منشآت فُتحت له حالة تأكيد استلام.',
+          'عميل تعطّل استخدامه بسبب مشكلة تقنية ويطالب بتعويض.',
+          'عميل يقترح ميزة جديدة للمنصة.'
+        ], links:[RES.task4_4]},
+        {...FIXED, code:'4.5', links:[RES.taskWebinar4, RES.webinarLive, RES.webinarDrive]}
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
+      oral:[
+        'متى يُمنع فتح تذكرة تفعيل رِواء باي؟ وما البديل؟',
+        'أين يجد الموظف فاتورة اشتراك العميل في CRM؟',
+        'ما الفرق بين خطوات Grubtech للعميل الجديد والعميل الحالي؟',
+        'ما شرط استفادة عميل منشآت من الدعم؟ ومن يقرر استحقاق الكاش باك؟'
+      ]}
+  ]
+},
+
+{
+  num:5, c:'--d5', t:'--d5t',
+  titleAr:'إعادة التفعيل والحالات والجودة', titleEn:'Reactivation, Cases & Quality',
+  blocks:[]
+}
+
+];
+
+const linkBtns = (arr, style='') => arr && arr.length
+  ? `<div class="link-row" ${style}>${arr.map(l=>`<a class="link-btn" href="${l.url}" target="_blank" rel="noopener">🔗 ${l.label}</a>`).join('')}</div>` : '';
+
+const pathOf = l => `<div class="path">📍 <b>المسار:</b> البوابة ← ${l.path.join(' ← ')} ← ${l.label}</div>`;
+
+function renderPart(p){
+  const links = p.links || [];
+  return `<div class="part">
+    <h4>${p.h}</h4>
+    <ul class="pts">${p.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+    ${links.filter(l=>l!==RES.portal).map(pathOf).join('')}
+    ${linkBtns(links)}
+  </div>`;
+}
+
+function renderTask(t){
+  const items = t.items && t.items.length ? `<ol class="scen">${t.items.map(i=>`<li>${i}</li>`).join('')}</ol>` : '';
+  const foot = (t.links && t.links.length) ? linkBtns(t.links,'style="margin-top:8px"') : `<span class="ph">🔗 رابط التاسك — يُضاف لاحقاً</span>`;
+  return `<div class="task-box ${t.fixed?'fixed-task':''}">
+    <div class="task-head"><span class="task-code">${t.code==='ثابت'?'ثابت':'تاسك '+t.code}</span><span class="task-title">${t.title}</span></div>
+    <p class="goal"><b>المطلوب:</b> ${t.goal}</p>
+    ${items}${foot}
+  </div>`;
+}
+
+function renderBlock(b, d){
+  if(b.type==='quiz'){
+    return `<div class="block" style="--block-c:var(--amber)">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(--amber-tint);--chip-c:var(--amber-ink)">📝 اختبار</span></div>
+      <h3>${b.title}</h3><p class="lead">${b.note}</p>
+      <div class="quiz-box"><ol>${b.questions.map(q=>`<li>${q}</li>`).join('')}</ol></div>
+      ${b.links&&b.links.length?linkBtns(b.links,'style="margin-top:8px"'):'<span class="ph">🔗 رابط الاختبار — يُضاف لاحقاً</span>'}
+    </div>`;
+  }
+  if(b.type==='session'){
+    return `<div class="block" style="--block-c:var(${d.c})">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(${d.t});--chip-c:var(${d.c})">🎓 جلسة تدريبية</span></div>
+      <h3>${b.title}</h3><p class="lead">${b.subtitle}</p>
+      ${b.parts.map(renderPart).join('')}
+    </div>`;
+  }
+  if(b.type==='break-task' || b.type==='task-free'){
+    const kind = b.type==='break-task' ? '🍽️ استراحة + مراجعة + تاسكات' : '✍️ تاسكات + وقت حر';
+    return `<div class="block" style="--block-c:var(--purple)">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(--purple-tint);--chip-c:var(--purple-ink)">${kind}</span></div>
+      <h3>${b.title}</h3>
+      ${b.review?`<div class="review-note">🗒️ ${b.review}</div>`:''}
+      <div class="task-stack">${b.tasks.map(renderTask).join('')}</div>
+    </div>`;
+  }
+  if(b.type==='break'){
+    return `<div class="block" style="--block-c:#9c96a8">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind">☕ استراحة</span></div>
+      <h3>${b.title}</h3>
+    </div>`;
+  }
+  if(b.type==='closing'){
+    const parts = b.parts ? b.parts.map(renderPart).join('') : '';
+    const fq = b.finalQuiz ? `<div class="final-quiz"><h4>📝 الاختبار الختامي الشامل</h4><ol>${b.finalQuiz.map(q=>`<li>${q}</li>`).join('')}</ol><span class="ph">🔗 رابط الاختبار الختامي — يُضاف لاحقاً</span></div>` : '';
+    return `<div class="block" style="--block-c:var(${d.c})">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(${d.t});--chip-c:var(${d.c})">🏁 الجلسة الثالثة — ختامية + شفهي</span></div>
+      <h3>${b.title}</h3>
+      ${parts}${fq}
+      <div class="oral-box">
+        <p class="lead">مراجعة ونقاش، ثم اختبار شفهي، ثم الإجابة عن الأسئلة والاستفسارات الناتجة عن تطبيق الويبينار أو محتوى اليوم. أسئلة مقترحة للاختبار الشفهي:</p>
+        <ul>${b.oral.map(q=>`<li>${q}</li>`).join('')}</ul>
+      </div>
+    </div>`;
+  }
+  return '';
+}
+
+function render(){
+  let tasks=0, quizzes=0, sessions=0;
+  DAYS.forEach(d=>d.blocks.forEach(b=>{
+    if(b.tasks) tasks += b.tasks.length;
+    if(b.type==='quiz') quizzes++;
+    if(b.finalQuiz) quizzes++;
+    if(b.type==='session'||b.type==='closing') sessions++;
+  }));
+  document.getElementById('stats').innerHTML = [
+    [5,'أيام تدريب'],[15,'جلسة تدريبية (3 يومياً)'],[5,'اختبارات شفهية']
+  ].map(([n,l])=>`<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+
+  const tabsEl=document.getElementById('dayTabs'), panelsEl=document.getElementById('dayPanels');
+  tabsEl.innerHTML = DAYS.map((d,i)=>`<button type="button" class="day-tab ${i===3?'active':''}" data-idx="${i}" style="--dc:var(${d.c});--dt:var(${d.t})"><span class="num">${d.num}</span><span class="lbl">${d.titleAr}</span></button>`).join('');
+  panelsEl.innerHTML = DAYS.map((d,i)=>`<section class="day-panel ${i===3?'active':''}" data-idx="${i}" style="--dc:var(${d.c});--dt:var(${d.t})">
+      <div class="day-head"><span class="badge">${d.num}</span><div><h2>اليوم ${d.num}: ${d.titleAr}</h2><p class="sub">${d.titleEn}</p></div></div>
+      <div class="timeline">${d.blocks.length?d.blocks.map(b=>renderBlock(b,d)).join(''):'<div class="block" style="--block-c:var(--border)"><div class="no-test"><span>محتوى هذا اليوم قيد الإعداد.</span></div></div>'}</div>
+    </section>`).join('');
+  tabsEl.querySelectorAll('.day-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    const idx=btn.dataset.idx;
+    tabsEl.querySelectorAll('.day-tab').forEach(x=>x.classList.toggle('active',x===btn));
+    panelsEl.querySelectorAll('.day-panel').forEach(x=>x.classList.toggle('active',x.dataset.idx===idx));
+    window.scrollTo({top:tabsEl.offsetTop-10,behavior:'smooth'});
+  }));
+
+}
+render();
+</script>
